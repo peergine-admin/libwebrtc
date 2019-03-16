@@ -1,5 +1,11 @@
 os: Visual Studio 2015
 
+init:
+- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+environment:
+  APPVEYOR_RDP_PASSWORD:
+    secure: 0Wil8x7H+cNu0FEuVlCH8Q==
+
 matrix:
   fast_finish: true
 
