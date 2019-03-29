@@ -1,7 +1,6 @@
 os: Visual Studio 2015
-environment:
-  APPVEYOR_RDP_PASSWORD:123456rdp
 init:
+- ps: set APPVEYOR_RDP_PASSWORD=123456rdp
 - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 
